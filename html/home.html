@@ -92,7 +92,6 @@
           </div>
           <div class="swipper_buttons" >
             <div class="swiper-button-prev"> <i class="bi bi-arrow-right"></i> </div>
-          
             <div class="swiper-button-next"> <i class="bi bi-arrow-left"></i> </div>
         </div>
         <div class="head_text">
@@ -106,44 +105,6 @@
            <div class="curved_head_image"> </div>
         </div>
       
-
-        <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="false">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner curved-image">
-            <div class="carousel-item active">
-              <img src="../images/1.jpg" alt="Curved Section Image" class="main_image">
-            </div>
-            <div class="carousel-item">
-              <img src="../images/test1.jpeg" alt="Curved Section Image" class="main_image">
-            </div>
-            <div class="carousel-item">
-              <img src="../images/test2.jpg" alt="Curved Section Image" class="main_image">
-            </div>
-            <img src="../images/gradient_image.png" class="top_gradient_img">
-          </div>
-          <button id="prevButton" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"><i class="bi bi-arrow-left"></i></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button id="nextButton" class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-          <div class="head_text">
-            <h1 class="head_title">استثمر في مستقبلك مع الدهام العقارية</h1>
-            <p class="head_desc">نعمل على بناء مستقبل أكثر ازدهاراً ونماءً من خلال تقديم مشاريع عقارية مبتكرة تلبي احتياجات عملائنا وتساهم في تحسين جودة حياتهم. انضم إلينا في رحلتنا نحو تحقيق أحلامك العقارية.</p>
-            <a class="btn primary_btn mx_content px-4">الذهاب الي مشاريعنا</a>
-          </div>
-          <div class="curved_head_image"></div>
-        </div>         -->
-
-
-
-
             <!-- end header -->
 
             <!-- section 2 -->
@@ -808,7 +769,7 @@
                     <h1 class="main_title primary_color">بناء <span class="white"> مستقبل </span> مشرق بشراكات استراتيجية </h1>
                   </div>
                   <div class="partner_list">
-                    <div class="swiper project_swipper ">
+                    <div class="swiper partner_swipper ">
                       <div class="swiper-wrapper">
                           <div class="swiper-slide member_item">
                             <img src="../images/partner.svg" class="img">
@@ -840,7 +801,7 @@
                 <div class="curved_image top"> </div>
               </div>
 
-              <!-- section 9 (event) -->
+              <!-- section 8 (event) -->
               <div class="col-12 events default_padding"> 
                 <div class="title">
                   <h4 class="subtitle"><img src="../images/small_logo.svg"> <span>المدونة</span> </h4>
@@ -931,10 +892,10 @@
 
 
              </div> 
-           
+        </div>
 
         <!-- footer -->
-         <div>
+         <div class="footer_section">
           <div class="curved_image bottom"> </div>
             <footer class="bg_blue default_padding">
               <div class="upper_footer">
@@ -1022,7 +983,6 @@
 
 <script>
     var swiper = new Swiper(".default_swipper", {
-
         slidesPerView: 2,
         spaceBetween: 24,
         pagination: {
@@ -1047,7 +1007,7 @@
 
 
     // <!-- Initialize Swiper -->
-    var swiper = new Swiper(".project_swipper", {
+    let project_swipper = new Swiper(".project_swipper", {
       slidesPerView: 1,
       spaceBetween: 24,
       freeMode: true,
@@ -1078,10 +1038,36 @@
         },
     });
 
-</script>
+        // <!-- Initialize Swiper -->
+        let partner_swipper = new Swiper(".partner_swipper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      freeMode: true,
+   
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+            600: {
+                slidesPerView: 2,
+            },
+            800: {
+                slidesPerView: 3,
+            },
+            1300: {
+              slidesPerView: 4,
+            },
+            1700: {
+                slidesPerView: 5,
+            },
+            2100: {
+                slidesPerView: 6,
+            }
+        },
+    });
 
-<!-- Initialize head Swiper -->
-<script>
+// <!-- Initialize head Swiper -->
   var swiper = new Swiper(".head_swipper", {
     pagination: {
       el: ".swiper-pagination",
